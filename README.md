@@ -23,6 +23,29 @@ The Hospital Management System is a scalable, containerized solution deployed on
   - Fault tolerance provided by Kubernetes and managed database solutions.
 
 ---
+# Containerized Application
+
+This document explains the architecture of a containerized application for managing hospital data efficiently.
+
+## Single Container Setup
+
+![Single Container Setup](Docker%20Container.png)
+
+- A single container is configured to handle data for two hospitals.  
+- Data is stored in a centralized database to prevent loss, even if the container stops or restarts.  
+- This setup is simple but serves as the foundation for more scalable solutions.
+
+## Scalable Multi-Container Setup
+
+![Scalable Container Setup](k8.png)
+
+- Multiple cloned containers are deployed to handle the workload for additional hospitals.  
+- All containers are connected to a single centralized database and managed through Kubernetes.  
+- This setup provides scalability, high availability, and reliability for large-scale operations.
+
+![Scalable Multi-Container Setup](K8-all.png)
+
+---
 
 ## **Steps to Replicate the Architecture**
 
